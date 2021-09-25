@@ -2,20 +2,23 @@
 from dataclasses import dataclass, field
 from typing import List
 
+@dataclass
+class rating:
+    total: int
+    average: float
+    count: int
 
 @dataclass
 class basket:
     id: int
     date: str
-    total_co2: int
-    total_animal_wellfare: int
-    avaragescore_co2: float
-    avaragescore_animal_wellfare: float
+    rating_co2: rating
+    rating_animal_welfare: rating
 
 @dataclass
 class sustainability:
     total_co2: int
-    total_animal_wellfare: int
+    total_animal_welfare: int
 
 @dataclass
 class customer:
