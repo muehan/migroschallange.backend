@@ -1,0 +1,15 @@
+{
+    "id": "101324",
+    "baskets": [{
+        "id": "34293",
+        "date": "2020-01-06",
+        "total_co2": 990,
+        "total_animal_wellfare": 0,
+        "avaragescore_co2": 0.0,
+        "avaragescore_animal_wellfare": 0.0
+    }],
+    "sustainability": {
+        "total_co2": 990,
+        "total_animal_wellfare": 0
+    }
+}
