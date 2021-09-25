@@ -4,17 +4,17 @@ import json
 from models import basket, customer, sustainability
 
 
-def CalculateScore(rating):
+def CalculateScore(rating, amount):
     if(rating == 1):
         return 0
     if(rating == 2):
         return 0
     if(rating == 3):
-        return 1
+        return 1 * amount
     if(rating == 4):
-        return 3
+        return 3 * amount
     if(rating == 5):
-        return 6
+        return 6 * amount
     return 0
 
 
@@ -58,12 +58,12 @@ if __name__ == '__main__':
                                 print("found ground and sea cargo")
                                 ground_and_sea_cargo = carbon_footprint["ground_and_sea_cargo"]
                                 rating = ground_and_sea_cargo["rating"]
-                                calculatedScore = CalculateScore(int(rating))
+                                calculatedScore = CalculateScore(int(rating), float(columns[9]))
                                 sustanable_score = calculatedScore
                                 currentBasket.total_co2 += sustanable_score
             else:
                 print('product not found: ' + str(columns[8]))
-            if(i == 10000):
+            if(i == 1000000):
                 break
 
 for item in customers:
